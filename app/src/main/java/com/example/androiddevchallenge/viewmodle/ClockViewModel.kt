@@ -5,12 +5,11 @@ import android.os.CountDownTimer
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlin.properties.Delegates
 
 
 class ClockViewModel : ViewModel() {
     private val _time = MutableLiveData(0L)
-    private val _progress = MutableLiveData(0.1f)
+    private val _progress = MutableLiveData(0f)
     private lateinit var countDownTimer: CountDownTimer
     val time: LiveData<Long> = _time
     val progress: LiveData<Float> = _progress
